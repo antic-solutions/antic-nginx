@@ -1,17 +1,17 @@
 version: '3.6'
 
 services:
-  my-app:
+  tylerrwallcom:
     image: nginx
     restart: always
     volumes:
       - "./:/usr/share/nginx/html"
     environment:
       # NGINX-PROXY ENVIRONMENT VARIABLES: UPDATE ME
-      - VIRTUAL_HOST=your-website-one.com 
+      - VIRTUAL_HOST=tylerrwall.com 
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=your-website-one.com 
-      - LETSENCRYPT_EMAIL=your.email@domain.com
+      - LETSENCRYPT_HOST=tylerrwall.com 
+      - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
       # /END NGINX-PROXY ENVIRONMENT VARIABLES
     expose:
       - 80
