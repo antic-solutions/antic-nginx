@@ -1,6 +1,4 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-*.Rproj
 .DS_Store
+nginx-proxy/certs/*
+nginx-proxy/conf.d/*
+nginx-proxy/vhost.d/*

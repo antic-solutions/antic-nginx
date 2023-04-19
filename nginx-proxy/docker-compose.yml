@@ -1,4 +1,5 @@
 version: '3.6'
+
 services:
   nginx:
     image: nginx
@@ -41,7 +42,19 @@ services:
     environment:
       NGINX_DOCKER_GEN_CONTAINER: "nginx-gen"
       NGINX_PROXY_CONTAINER: "nginx"
+
+  anticsolutionscom:
+    extends:
+      file: ../sites/anticsolutions.com/docker-compose.yml
+      service: anticsolutionscom
+    restart: always
+
+  tylerrwallcom:
+    extends:
+      file: ../sites/tylerrwall.com/docker-compose.yml
+      service: tylerrwallcom
+    restart: always
+
 networks:
   default:
-    external:
-      name: nginx-proxy
+    name: nginx-proxy
