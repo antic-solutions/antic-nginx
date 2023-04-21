@@ -11,4 +11,4 @@ log:
 	docker compose -f nginx-proxy/docker-compose.yml logs -f
 
 ci:
-	docker compose -f nginx-proxy/docker-compose-production.yml up
+	docker compose -f nginx-proxy/docker-compose.yml -f nginx-proxy/docker-compose-production.yml -d
