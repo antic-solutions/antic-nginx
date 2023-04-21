@@ -1,0 +1,6 @@
+.DS_Store
+certs/*
+conf.d/*
+vhost.d/*
+sites/*
+html/*

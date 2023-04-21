@@ -1,0 +1,3 @@
+[submodule "sites/antic-chatbot-ui"]
+	path = sites/antic-chatbot-ui
+	url = https://github.com/antic-solutions/antic-chatbot-ui.git
