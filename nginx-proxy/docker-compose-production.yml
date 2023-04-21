@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  chatbot-anticsolutions:
+    extends: 
+      file: ./docker-compose.yml
+      service: chatbot-anticsolutions
+    image: wallter/antic-chatbot-ui:latest
+    environment:
+      - NODE_ENV=production
