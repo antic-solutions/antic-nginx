@@ -2,3 +2,4 @@
 nginx-proxy/certs/*
 nginx-proxy/conf.d/*
 nginx-proxy/vhost.d/*
+nginx-proxy/sites/*
