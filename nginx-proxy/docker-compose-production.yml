@@ -6,5 +6,15 @@ services:
       file: ./docker-compose.yml
       service: chatbot-anticsolutions
     image: wallter/antic-chatbot-ui:latest
+    expose:
+      - 3000
+    restart: always
+    volumes:
+      - ../antic-chatbot-ui.env:/usr/src/app/.env
     environment:
+      - VIRTUAL_HOST=chat-ui.anticsolutions.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=chat-ui.anticsolutions.com
+      - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
       - NODE_ENV=production
+    # build: ../sites/antic-chatbot-ui
