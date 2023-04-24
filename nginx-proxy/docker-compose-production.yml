@@ -4,7 +4,7 @@ services:
   chatbot-anticsolutions:
     image: wallter/antic-chatbot-ui:latest
     expose:
-      - 3000
+      - 80
     restart: always
     volumes:
       - ../antic-chatbot-ui.env:/usr/src/app/.env
