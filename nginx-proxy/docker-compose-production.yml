@@ -15,3 +15,7 @@ services:
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
       - NODE_ENV=production
     # build: ../sites/antic-chatbot-ui
+
+networks:
+  default:
+    name: nginx-proxy
