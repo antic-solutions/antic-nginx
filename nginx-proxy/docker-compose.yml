@@ -53,6 +53,9 @@ services:
       - VIRTUAL_PORT=80
       - LETSENCRYPT_HOST=tylerrwall.com
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
+    depends_on:
+      - nginx
+      - nginx-gen
 
   anticsolutionscom:
     extends:
@@ -65,6 +68,21 @@ services:
       - LETSENCRYPT_HOST=anticsolutions.com
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
 
-networks:
-  default:
-    name: nginx-proxy
+  chatbot-anticsolutions:
+    chatbot-anticsolutions:
+    image: wallter/antic-chatbot-ui:latest
+    expose:
+      - 80
+    restart: always
+    volumes:
+      - ../antic-chatbot-ui.env:/usr/src/app/.env
+    environment:
+      - VIRTUAL_HOST=chat-ui.anticsolutions.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=chat-ui.anticsolutions.com
+      - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
+      - NODE_ENV=production
+    # build: ../sites/antic-chatbot-ui
+    depends_on:
+      - nginx
+      - nginx-gen

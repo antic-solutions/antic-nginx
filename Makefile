@@ -7,11 +7,5 @@ down:
 restart:
 	docker compose -f nginx-proxy/docker-compose.yml restart
 
-log: 
+logs: 
 	docker compose -f nginx-proxy/docker-compose.yml logs -f
-
-build:
-	docker compose -f nginx-proxy/docker-compose.yml -f nginx-proxy/docker-compose-production.yml build
-
-ci:
-	docker compose -f nginx-proxy/docker-compose.yml -f nginx-proxy/docker-compose-production.yml up --detach
