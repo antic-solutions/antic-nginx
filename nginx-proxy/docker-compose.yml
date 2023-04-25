@@ -54,9 +54,6 @@ services:
       - VIRTUAL_PORT=80
       - LETSENCRYPT_HOST=tylerrwall.com
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
-    depends_on:
-      - nginx
-      - nginx-gen
 
   anticsolutionscom:
     container_name: anticsolutionscom
@@ -84,6 +81,3 @@ services:
       - LETSENCRYPT_HOST=chat-ui.anticsolutions.com
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
       - NODE_ENV=production
-    depends_on:
-      - nginx
-      - nginx-gen
