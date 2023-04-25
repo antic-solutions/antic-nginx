@@ -69,7 +69,6 @@ services:
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
 
   chatbot-anticsolutions:
-    chatbot-anticsolutions:
     image: wallter/antic-chatbot-ui:latest
     expose:
       - 80
@@ -82,7 +81,6 @@ services:
       - LETSENCRYPT_HOST=chat-ui.anticsolutions.com
       - LETSENCRYPT_EMAIL=tyler.r.wall@gmail.com
       - NODE_ENV=production
-    # build: ../sites/antic-chatbot-ui
     depends_on:
       - nginx
       - nginx-gen
